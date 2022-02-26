@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import AppContext from '../context/AppContext'
 import {handleSumTotal} from '../utils/sum'
+import { Helmet } from 'react-helmet'
 import { TrashIcon } from '@heroicons/react/solid'
 import '../styles/Checkout.css'
 
@@ -14,6 +15,9 @@ const Checkout = () => {
 
     return (
         <>
+        <Helmet>
+            <title>lista de pedidos -plazti conf merch</title>
+        </Helmet>
             <div className="Checkout">
                 <div className="Checkout-content">
                     {cart.length > 0 ? <h3>lista de pedidos:</h3> : <h3>sin pedidos ...</h3>}
